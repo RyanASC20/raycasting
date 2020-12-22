@@ -11,10 +11,7 @@ let walls = [];
 const numWalls = 5;
 const wallWidth = 4;
 
-
 let running = false;
-
-
 
 class Vectors {
     constructor(angle, len) {
@@ -110,7 +107,8 @@ function startOrStop() {
 
 
 function setup() {
-    createCanvas(canWidth + 100, canHeight + 100)
+    let cnv = createCanvas(canWidth + 100, canHeight + 100);
+    cnv.parent('canvas')
     background(50);
     getWalls(0);
     getVectors(vectorLength);
